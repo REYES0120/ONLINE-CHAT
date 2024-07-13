@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Client</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="users-container">
+            <h3>Utilisateurs en ligne :</h3>
+            <div id="onlineUsers" class="online-users-box"></div>
+        </div>
+        <div class="chat-box">
+            <div id="chatDisplay" class="chat-display"></div>
+            <div id="typingNotification" class="typing-notification"></div>
+            <div id="messageEntry" class="message-entry">
+                <input id="messageInput" type="text" placeholder="Tapez votre message ici...">
+                <button id="sendButton">Envoyer</button>
+                <button id="clearButton">Effacer</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.username = "{{ username }}";
+    </script>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
+
